@@ -17,7 +17,15 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jmbMenuBar = new javax.swing.JMenuBar();
-        jmFile = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jmiContact = new javax.swing.JMenuItem();
+        jSeparator3 = new javax.swing.JPopupMenu.Separator();
+        jmRegister = new javax.swing.JMenu();
+        jmiCity = new javax.swing.JMenuItem();
+        jSeparator1 = new javax.swing.JPopupMenu.Separator();
+        jmiContactType = new javax.swing.JMenuItem();
+        jSeparator2 = new javax.swing.JPopupMenu.Separator();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jmAbout = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -25,9 +33,47 @@ public class Principal extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 800));
 
-        jmFile.setText("File");
-        jmbMenuBar.add(jmFile);
+        jmbMenuBar.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                jmbMenuBarComponentHidden(evt);
+            }
+        });
 
+        jMenu1.setMnemonic('F');
+        jMenu1.setText("File");
+
+        jmiContact.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jmiContact.setText("Contact");
+        jMenu1.add(jmiContact);
+        jMenu1.add(jSeparator3);
+
+        jmRegister.setMnemonic('R');
+        jmRegister.setText("Register");
+
+        jmiCity.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jmiCity.setText("City");
+        jmRegister.add(jmiCity);
+        jmRegister.add(jSeparator1);
+
+        jmiContactType.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jmiContactType.setText("Area");
+        jmiContactType.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiContactTypeActionPerformed(evt);
+            }
+        });
+        jmRegister.add(jmiContactType);
+        jmRegister.add(jSeparator2);
+
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItem4.setText("Contact Type");
+        jmRegister.add(jMenuItem4);
+
+        jMenu1.add(jmRegister);
+
+        jmbMenuBar.add(jMenu1);
+
+        jmAbout.setMnemonic('A');
         jmAbout.setText("About");
         jmbMenuBar.add(jmAbout);
 
@@ -41,11 +87,19 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 477, Short.MAX_VALUE)
+            .addGap(0, 3984, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jmiContactTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContactTypeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmiContactTypeActionPerformed
+
+    private void jmbMenuBarComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jmbMenuBarComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmbMenuBarComponentHidden
 
     /**
      * @param args the command line arguments
@@ -83,8 +137,16 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JPopupMenu.Separator jSeparator2;
+    private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenu jmAbout;
-    private javax.swing.JMenu jmFile;
+    private javax.swing.JMenu jmRegister;
     private javax.swing.JMenuBar jmbMenuBar;
+    private javax.swing.JMenuItem jmiCity;
+    private javax.swing.JMenuItem jmiContact;
+    private javax.swing.JMenuItem jmiContactType;
     // End of variables declaration//GEN-END:variables
 }
