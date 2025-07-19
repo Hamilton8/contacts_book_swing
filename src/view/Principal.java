@@ -6,8 +6,8 @@ import javax.swing.JFrame;
 public class Principal extends javax.swing.JFrame {
 
     
-    public Principal() {
-        setTitle("Contacts Book");
+    public Principal() { 
+        setTitle("Contacts Book - Hamilton");
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
@@ -16,10 +16,22 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jmbMenuBar = new javax.swing.JMenuBar();
+        jmFile = new javax.swing.JMenu();
+        jmAbout = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 800));
+
+        jmFile.setText("File");
+        jmbMenuBar.add(jmFile);
+
+        jmAbout.setText("About");
+        jmbMenuBar.add(jmAbout);
+
+        setJMenuBar(jmbMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -29,7 +41,7 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGap(0, 477, Short.MAX_VALUE)
         );
 
         pack();
@@ -71,5 +83,8 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu jmAbout;
+    private javax.swing.JMenu jmFile;
+    private javax.swing.JMenuBar jmbMenuBar;
     // End of variables declaration//GEN-END:variables
 }
