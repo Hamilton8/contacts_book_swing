@@ -38,11 +38,11 @@ public class Principal extends javax.swing.JFrame {
         jDesktop.setLayout(jDesktopLayout);
         jDesktopLayout.setHorizontalGroup(
             jDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 756, Short.MAX_VALUE)
+            .addGap(0, 1489, Short.MAX_VALUE)
         );
         jDesktopLayout.setVerticalGroup(
             jDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1699, Short.MAX_VALUE)
+            .addGap(0, 658, Short.MAX_VALUE)
         );
 
         jmbMenuBar.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -51,6 +51,7 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fd.png"))); // NOI18N
         jMenu1.setMnemonic('F');
         jMenu1.setText("File");
 
@@ -90,6 +91,7 @@ public class Principal extends javax.swing.JFrame {
 
         jmbMenuBar.add(jMenu1);
 
+        jmAbout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/about.png"))); // NOI18N
         jmAbout.setMnemonic('A');
         jmAbout.setText("About");
         jmbMenuBar.add(jmAbout);
@@ -100,13 +102,11 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktop, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jDesktop)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 6, Short.MAX_VALUE)
-                .addComponent(jDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jDesktop)
         );
 
         pack();
@@ -121,7 +121,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jmbMenuBarComponentHidden
 
     private void jmiContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContactActionPerformed
-         DefaultForm screen = new DefaultForm();
+        DefaultForm screen = new DefaultForm();
         jDesktop.add(screen);
         screen.setVisible(true);
     }//GEN-LAST:event_jmiContactActionPerformed
