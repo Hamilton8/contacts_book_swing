@@ -56,6 +56,11 @@ public class Principal extends javax.swing.JFrame {
 
         jmiContact.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jmiContact.setText("Contact");
+        jmiContact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiContactActionPerformed(evt);
+            }
+        });
         jMenu1.add(jmiContact);
         jMenu1.add(jSeparator3);
 
@@ -108,12 +113,18 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmiContactTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContactTypeActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_jmiContactTypeActionPerformed
 
     private void jmbMenuBarComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jmbMenuBarComponentHidden
         // TODO add your handling code here:
     }//GEN-LAST:event_jmbMenuBarComponentHidden
+
+    private void jmiContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContactActionPerformed
+         DefaultForm screen = new DefaultForm();
+        jDesktop.add(screen);
+        screen.setVisible(true);
+    }//GEN-LAST:event_jmiContactActionPerformed
 
     /**
      * @param args the command line arguments
