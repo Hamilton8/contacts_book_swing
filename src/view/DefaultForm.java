@@ -1,7 +1,13 @@
 
 package view;
 
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 public class DefaultForm extends javax.swing.JInternalFrame {
+    
+    private JLabel jlSearch;
+    private JTextField jtfSearch;
 
     public DefaultForm() {
         
@@ -9,6 +15,14 @@ public class DefaultForm extends javax.swing.JInternalFrame {
         enableButtons(true);
         jtfId.setEnabled(false);
         enableFields(false);
+        
+        jlSearch = new JLabel("Search");
+        jlSearch.setBounds(9, 5, 50, 25);
+        jpnSearch.add(jlSearch);
+        
+        jtfSearch = new JTextField("");
+        jtfSearch.setBounds(9, 30, 500, 25);
+        jpnSearch.add(jtfSearch);
     }
 
     
@@ -31,7 +45,7 @@ public class DefaultForm extends javax.swing.JInternalFrame {
         jtfDescription = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        jpnSearch = new javax.swing.JPanel();
 
         jButton1.setText("jButton1");
 
@@ -178,16 +192,16 @@ public class DefaultForm extends javax.swing.JInternalFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        jPanel5.setBackground(new java.awt.Color(0, 242, 242));
+        jpnSearch.setBackground(new java.awt.Color(0, 242, 242));
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jpnSearchLayout = new javax.swing.GroupLayout(jpnSearch);
+        jpnSearch.setLayout(jpnSearchLayout);
+        jpnSearchLayout.setHorizontalGroup(
+            jpnSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jpnSearchLayout.setVerticalGroup(
+            jpnSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 221, Short.MAX_VALUE)
         );
 
@@ -195,7 +209,7 @@ public class DefaultForm extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jpnSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -217,7 +231,7 @@ public class DefaultForm extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jpnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(122, 122, 122)
@@ -290,7 +304,6 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JButton jbCancel;
     private javax.swing.JButton jbClose;
     private javax.swing.JButton jbDelete;
@@ -299,6 +312,7 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     private javax.swing.JButton jbSave;
     private javax.swing.JLabel jlDescription;
     private javax.swing.JLabel jlId;
+    private javax.swing.JPanel jpnSearch;
     private javax.swing.JTextField jtfDescription;
     private javax.swing.JTextField jtfId;
     // End of variables declaration//GEN-END:variables
