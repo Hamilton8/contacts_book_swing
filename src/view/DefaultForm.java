@@ -237,6 +237,8 @@ public class DefaultForm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         enableButtons(false);
         enableFields(true);
+        clearTextFields();
+        jtfDescription.requestFocus();
     }//GEN-LAST:event_jbNewActionPerformed
 
     private void jbCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCloseActionPerformed
@@ -247,6 +249,7 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     private void jbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEditActionPerformed
         enableButtons(false);
         enableFields(true);
+        jtfDescription.requestFocus();
     }//GEN-LAST:event_jbEditActionPerformed
 
     private void jbSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveActionPerformed
@@ -257,6 +260,7 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     private void jbCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelActionPerformed
         enableButtons(true);
         enableFields(false);
+        clearTextFields();
     }//GEN-LAST:event_jbCancelActionPerformed
 
     private void jtfDescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDescriptionActionPerformed
@@ -275,6 +279,10 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     
     protected void enableFields(boolean state){
         jtfDescription.setEnabled(state);
+    }
+    
+    protected void clearTextFields(){
+        jtfDescription.setText("");
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
