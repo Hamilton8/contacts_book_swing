@@ -24,15 +24,17 @@ public class Principal extends javax.swing.JFrame {
         jmRegister = new javax.swing.JMenu();
         jmiCity = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jmiContactType = new javax.swing.JMenuItem();
+        jmiArea = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jmiContactType = new javax.swing.JMenuItem();
         jmAbout = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 800));
+
+        jDesktop.setBackground(new java.awt.Color(5, 68, 94));
 
         javax.swing.GroupLayout jDesktopLayout = new javax.swing.GroupLayout(jDesktop);
         jDesktop.setLayout(jDesktopLayout);
@@ -70,22 +72,32 @@ public class Principal extends javax.swing.JFrame {
 
         jmiCity.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jmiCity.setText("City");
+        jmiCity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiCityActionPerformed(evt);
+            }
+        });
         jmRegister.add(jmiCity);
         jmRegister.add(jSeparator1);
 
-        jmiContactType.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jmiContactType.setText("Area");
+        jmiArea.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jmiArea.setText("Area");
+        jmiArea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiAreaActionPerformed(evt);
+            }
+        });
+        jmRegister.add(jmiArea);
+        jmRegister.add(jSeparator2);
+
+        jmiContactType.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jmiContactType.setText("Contact Type");
         jmiContactType.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jmiContactTypeActionPerformed(evt);
             }
         });
         jmRegister.add(jmiContactType);
-        jmRegister.add(jSeparator2);
-
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_T, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem4.setText("Contact Type");
-        jmRegister.add(jMenuItem4);
 
         jMenu1.add(jmRegister);
 
@@ -112,48 +124,36 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jmiContactTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContactTypeActionPerformed
-       
-    }//GEN-LAST:event_jmiContactTypeActionPerformed
+    private void jmiAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiAreaActionPerformed
+       DefaultForm screen = new AreaView();
+       jDesktop.add(screen);
+       screen.setVisible(true);
+    }//GEN-LAST:event_jmiAreaActionPerformed
 
     private void jmbMenuBarComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jmbMenuBarComponentHidden
         // TODO add your handling code here:
     }//GEN-LAST:event_jmbMenuBarComponentHidden
 
     private void jmiContactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContactActionPerformed
-        DefaultForm screen = new DefaultForm();
+        DefaultForm screen = new ContactView();
         jDesktop.add(screen);
         screen.setVisible(true);
     }//GEN-LAST:event_jmiContactActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Principal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jmiCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiCityActionPerformed
+        DefaultForm screen = new CityView();
+        jDesktop.add(screen);
+        screen.setVisible(true);
+    }//GEN-LAST:event_jmiCityActionPerformed
 
-        /* Create and display the form */
+    private void jmiContactTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiContactTypeActionPerformed
+        DefaultForm screen = new ContactTypeView();
+        jDesktop.add(screen);
+        screen.setVisible(true);
+    }//GEN-LAST:event_jmiContactTypeActionPerformed
+
+    public static void main(String args[]) {
+         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Principal().setVisible(true);
@@ -164,13 +164,13 @@ public class Principal extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktop;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     private javax.swing.JPopupMenu.Separator jSeparator3;
     private javax.swing.JMenu jmAbout;
     private javax.swing.JMenu jmRegister;
     private javax.swing.JMenuBar jmbMenuBar;
+    private javax.swing.JMenuItem jmiArea;
     private javax.swing.JMenuItem jmiCity;
     private javax.swing.JMenuItem jmiContact;
     private javax.swing.JMenuItem jmiContactType;
