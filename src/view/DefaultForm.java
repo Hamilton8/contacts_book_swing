@@ -6,9 +6,9 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     public DefaultForm() {
         
         initComponents();
-        //jbCancel.setEnabled(false);
-        //jbSave.setEnabled(false);
         enableButtons(true);
+        jtfId.setEnabled(false);
+        enableFields(false);
     }
 
     
@@ -236,6 +236,7 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     private void jbNewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbNewActionPerformed
         // TODO add your handling code here:
         enableButtons(false);
+        enableFields(true);
     }//GEN-LAST:event_jbNewActionPerformed
 
     private void jbCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCloseActionPerformed
@@ -245,14 +246,17 @@ public class DefaultForm extends javax.swing.JInternalFrame {
 
     private void jbEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEditActionPerformed
         enableButtons(false);
+        enableFields(true);
     }//GEN-LAST:event_jbEditActionPerformed
 
     private void jbSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveActionPerformed
         enableButtons(true);
+        enableFields(false);
     }//GEN-LAST:event_jbSaveActionPerformed
 
     private void jbCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelActionPerformed
         enableButtons(true);
+        enableFields(false);
     }//GEN-LAST:event_jbCancelActionPerformed
 
     private void jtfDescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfDescriptionActionPerformed
@@ -260,13 +264,17 @@ public class DefaultForm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jtfDescriptionActionPerformed
 
 
-    private void enableButtons(boolean state){
+    protected void enableButtons(boolean state){
         jbNew.setEnabled(state);
         jbEdit.setEnabled(state);
         jbDelete.setEnabled(state);
         
         jbSave.setEnabled(!state);
         jbCancel.setEnabled(!state);
+    }
+    
+    protected void enableFields(boolean state){
+        jtfDescription.setEnabled(state);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
