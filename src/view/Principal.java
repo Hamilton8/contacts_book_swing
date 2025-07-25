@@ -8,6 +8,7 @@ public class Principal extends javax.swing.JFrame {
     
     public Principal() { 
         setTitle("Contacts Book - Hamilton");
+        //setTitle(new String("Hamilton"));
         initComponents();
         setExtendedState(JFrame.MAXIMIZED_BOTH);
     }
