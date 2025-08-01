@@ -1,13 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package resources;
 
-/**
- *
- * @author Administrator
- */
-public class ContactTypeResource {
+import interfaces.InterfaceResource;
+
+public class ContactTypeResource implements InterfaceResource {
+
+    @Override
+    public void saveResource(Object... values) {
+         
+    }
+
+    @Override
+    public void deleteResource(int id) {
+       
+    }
+
+    @Override
+    public void rechargeComboBox() {
+        
+    }
     
 }

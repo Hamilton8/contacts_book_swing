@@ -23,4 +23,9 @@ public class AreaView extends DefaultForm{
         jcbArea.setBounds(10, 90, 250, 25);
         jpnSearch.add(jcbArea);
     }
+
+    @Override
+    public void saveView() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

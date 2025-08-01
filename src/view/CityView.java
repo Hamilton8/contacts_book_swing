@@ -9,7 +9,7 @@ public class CityView extends DefaultForm{
     JTextField jtfZip;
     public CityView(){
         setTitle("City Registration");
-        initializer();
+        //initializer();
     }
 
     @Override
@@ -21,5 +21,10 @@ public class CityView extends DefaultForm{
         jtfZip = new JTextField();
         jtfZip.setBounds(10, 95, 80, 25);
         jpnSearch.add(jtfZip);
+    }
+
+    @Override
+    public void saveView() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

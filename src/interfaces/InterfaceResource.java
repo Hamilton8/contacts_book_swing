@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
+
 package interfaces;
 
-/**
- *
- * @author Administrator
- */
 public interface InterfaceResource {
-    
+    public void saveResource(Object... values);
+    public void deleteResource(int id);
+    public void rechargeComboBox();
 }

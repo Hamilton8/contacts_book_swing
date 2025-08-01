@@ -1,6 +1,8 @@
 
 package view;
 
+import resources.ContactTypeResource;
+
 public class ContactTypeView extends DefaultForm{
     public ContactTypeView(){
         setTitle("Contact Type Registration");
@@ -8,6 +10,14 @@ public class ContactTypeView extends DefaultForm{
 
     @Override
     public void initializer() {
-        throw new UnsupportedOperationException("Not supported yet."); 
+         
+    }
+
+    ContactTypeResource ctr = new ContactTypeResource();
+    
+    @Override
+    public void saveView() {
+        ctr.saveResource(jtfId.getText(),jtfDescription.getText());
+        
     }
 }

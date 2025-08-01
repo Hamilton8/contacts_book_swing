@@ -10,7 +10,7 @@ public abstract class DefaultForm extends javax.swing.JInternalFrame {
     private JTextField jtfSearch;
     
     public abstract void initializer();
-    
+    public abstract void saveView();
 
     public DefaultForm() {
         
@@ -18,6 +18,7 @@ public abstract class DefaultForm extends javax.swing.JInternalFrame {
         enableButtons(true);
         jtfId.setEnabled(false);
         enableFields(false);
+        initializer();
         
         jlSearch = new JLabel("Search");
         jlSearch.setBounds(9, 5, 50, 25);
@@ -272,6 +273,7 @@ public abstract class DefaultForm extends javax.swing.JInternalFrame {
     private void jbSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveActionPerformed
         enableButtons(true);
         enableFields(false);
+        saveView();
     }//GEN-LAST:event_jbSaveActionPerformed
 
     private void jbCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelActionPerformed
@@ -316,7 +318,7 @@ public abstract class DefaultForm extends javax.swing.JInternalFrame {
     protected javax.swing.JPanel jpnButtons;
     protected javax.swing.JPanel jpnForm;
     protected javax.swing.JPanel jpnSearch;
-    private javax.swing.JTextField jtfDescription;
-    private javax.swing.JTextField jtfId;
+    protected javax.swing.JTextField jtfDescription;
+    protected javax.swing.JTextField jtfId;
     // End of variables declaration//GEN-END:variables
 }
