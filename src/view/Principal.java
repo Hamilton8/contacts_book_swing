@@ -1,6 +1,7 @@
 
 package view;
 
+import dao.ConnectionBase;
 import javax.swing.JFrame;
 
 public class Principal extends javax.swing.JFrame {
@@ -18,6 +19,7 @@ public class Principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jDesktop = new javax.swing.JDesktopPane();
+        jButton1 = new javax.swing.JButton();
         jmbMenuBar = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jmiContact = new javax.swing.JMenuItem();
@@ -35,15 +37,32 @@ public class Principal extends javax.swing.JFrame {
         setResizable(false);
         setSize(new java.awt.Dimension(1000, 800));
 
+        jDesktop.setBackground(new java.awt.Color(0, 153, 204));
+
+        jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jDesktop.setLayer(jButton1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout jDesktopLayout = new javax.swing.GroupLayout(jDesktop);
         jDesktop.setLayout(jDesktopLayout);
         jDesktopLayout.setHorizontalGroup(
             jDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1492, Short.MAX_VALUE)
+            .addGroup(jDesktopLayout.createSequentialGroup()
+                .addGap(513, 513, 513)
+                .addComponent(jButton1)
+                .addContainerGap(929, Short.MAX_VALUE))
         );
         jDesktopLayout.setVerticalGroup(
             jDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 626, Short.MAX_VALUE)
+            .addGroup(jDesktopLayout.createSequentialGroup()
+                .addGap(194, 194, 194)
+                .addComponent(jButton1)
+                .addContainerGap(441, Short.MAX_VALUE))
         );
 
         jmbMenuBar.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -113,16 +132,11 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+            .addComponent(jDesktop)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jDesktop, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 32, Short.MAX_VALUE))
+            .addComponent(jDesktop)
         );
 
         pack();
@@ -156,6 +170,10 @@ public class Principal extends javax.swing.JFrame {
         screen.setVisible(true);
     }//GEN-LAST:event_jmiContactTypeActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ConnectionBase.getConnection();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
          
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -166,6 +184,7 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JDesktopPane jDesktop;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JPopupMenu.Separator jSeparator1;

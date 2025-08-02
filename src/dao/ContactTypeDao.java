@@ -1,13 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package dao;
 
-/**
- *
- * @author Administrator
- */
-public class ContactTypeDao {
+import interfaces.InterfaceDao;
+import java.sql.SQLException;
+import javax.swing.JComboBox;
+import model.ContactTypeModel;
+
+public class ContactTypeDao implements InterfaceDao{
+
+    @Override
+    public void saveDAO(Object... values) {
+        ContactTypeModel ctm = (ContactTypeModel)values[0];
+    }
+
+    @Override
+    public void deleteDAO(int id) {
+        
+    }
+
+    @Override
+    public void searchDAO(Object... value) throws SQLException {
+        
+    }
+
+    @Override
+    public void rechargeComboBoxDAO(JComboBox jcb) throws SQLException {
+        
+    }
     
 }
